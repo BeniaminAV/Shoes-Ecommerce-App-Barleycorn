@@ -1,7 +1,7 @@
 const Favorite = () => {
   return (
-    <div>
-      <h2>this is favorite page</h2>
+    <div className="pt-[10vh]">
+      <h2 className="">this is favorite page</h2>
     </div>
   )
 }

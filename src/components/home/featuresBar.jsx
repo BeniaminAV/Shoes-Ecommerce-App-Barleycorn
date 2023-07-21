@@ -19,11 +19,11 @@ const FeaturesBar = () => {
           <p>SECURE PAYMENTS</p>
         </span>
 
-        <span className="flex items-center justify-center gap-x-2 my-2  text-sm lg:text-lg">
+        <span className="flex items-center justify-center gap-x-2 my-2 text-sm lg:text-lg">
           <GiReturnArrow size={20} />
           <p>30 DAYS FREE RETURNS</p>
         </span>
-        <span className="flex items-center justify-center gap-x-2 my-2  text-sm lg:text-lg">
+        <span className="flex items-center justify-center gap-x-2 my-2 text-sm lg:text-lg">
           <GiStarSattelites size={20} />
           <p>MADE IN ITALY</p>
         </span>

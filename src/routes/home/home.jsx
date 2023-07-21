@@ -3,10 +3,10 @@ import FeaturesBar from "../../components/home/featuresBar"
 
 const Home = () => {
   return (
-    <>
+    <main>
       <Backgroud />
       <FeaturesBar />
-    </>
+    </main>
   )
 }
 
