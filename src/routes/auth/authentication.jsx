@@ -24,6 +24,7 @@ const Authentication = () => {
       <Container>
         {variant === "LOGIN" ? (
           <>
+            
             <div className="w-[470px]">
               <Title
                 title={"Log in"}
@@ -37,6 +38,7 @@ const Authentication = () => {
 
               <Login />
             </div>
+            
             <div className="w-[470px] h-[220px] bg-[#f3f3f3] my-10">
               <div className="mx-5">
                 <Title
@@ -54,9 +56,11 @@ const Authentication = () => {
                 />
               </div>
             </div>
+            
           </>
         ) : (
           <>
+            
             <div className="w-[470px]">
               <Title
                 title={"Sign in"}
@@ -70,6 +74,7 @@ const Authentication = () => {
 
               <SignUpForm />
             </div>
+            
           </>
         )}
       </Container>
