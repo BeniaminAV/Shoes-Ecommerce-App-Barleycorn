@@ -7,6 +7,7 @@ import FormInput from "../formInput"
 import Button from "../button"
 import { toast } from "react-hot-toast"
 import { isEmpty } from "lodash"
+import { useNavigate } from "react-router-dom"
 
 const defaultFormInput = {
   displayName: "",
@@ -16,6 +17,7 @@ const defaultFormInput = {
 }
 
 const SignUpForm = () => {
+  const navigate = useNavigate()
   const [formField, setFormField] = useState(defaultFormInput)
   const { displayName, email, password, confirmPassword } = formField
 
@@ -44,6 +46,7 @@ const SignUpForm = () => {
 
       await createDocumentForAuth(user, { displayName })
       toast.success("Resgistred")
+      navigate("/")
       resetFormField()
     } catch (error) {
       if (error.code === "user already exists") {

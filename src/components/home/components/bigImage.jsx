@@ -3,7 +3,7 @@ const BigImage = ({ className, src, alt }) => {
     <img
       src={src}
       alt={alt}
-      className={`w-full lg:w-[70%] h-[100%] ${className}`}
+      className={`w-full lg:w-[60%] md:w-[50%] h-[100%] ${className}`}
     />
   )
 }

@@ -4,13 +4,20 @@ import App from "./App"
 import "./styles/index.css"
 import { BrowserRouter } from "react-router-dom"
 import ToastProvider from "./components/provider/toast.provider"
+import { Provider } from "react-redux"
+import { persistor, store } from "./store/store"
+import { PersistGate } from "redux-persist/integration/react"
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <ToastProvider />
-      <App />
-    </BrowserRouter>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <BrowserRouter>
+          <ToastProvider />
+          <App />
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>
 )

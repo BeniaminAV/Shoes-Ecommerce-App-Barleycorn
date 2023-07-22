@@ -4,6 +4,7 @@ import FormInput from "../formInput"
 import Button from "../button"
 import { toast } from "react-hot-toast"
 import { isEmpty } from "lodash"
+import { useNavigate } from "react-router-dom"
 
 const defaultFormInput = {
   email: "",
@@ -13,6 +14,7 @@ const defaultFormInput = {
 const Login = () => {
   const [formFields, setFormFields] = useState(defaultFormInput)
   const { email, password } = formFields
+  const navigate = useNavigate()
 
   const resetFormField = () => {
     setFormFields(defaultFormInput)
@@ -22,14 +24,14 @@ const Login = () => {
     event.preventDefault()
 
     if (isEmpty(email) || isEmpty(password)) {
-      toast.error("Complete all fields!") 
+      toast.error("Complete all fields!")
       return
     }
 
     try {
-      const response = await signInAuthUserWithEmailAndPassword(email, password)
-      console.log(response)
+      await signInAuthUserWithEmailAndPassword(email, password)
       toast.success("You logged In")
+      navigate("/")
       resetFormField()
     } catch (error) {
       console.log(error, "email or password incorect")

@@ -1,6 +1,6 @@
 const SmallImage = ({ className, src, alt }) => {
   return (
-    <img src={src} alt={alt} className={`lg:w-[30%]  h-[100%] ${className}`} />
+    <img src={src} alt={alt} className={`lg:w-[40%] md:w-[50%]  ${className}`} />
   )
 }
 
