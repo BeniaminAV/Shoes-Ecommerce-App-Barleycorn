@@ -5,6 +5,7 @@ import Button from "../button"
 import { toast } from "react-hot-toast"
 import { isEmpty } from "lodash"
 import { useNavigate } from "react-router-dom"
+import SocialAuth from "./socialAuth"
 
 const defaultFormInput = {
   email: "",
@@ -67,6 +68,8 @@ const Login = () => {
         />
       </form>
       <Button buttonType={"red"} label="Log In" onClick={onSubmit} />
+
+      <SocialAuth />
     </>
   )
 }

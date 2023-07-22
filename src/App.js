@@ -13,7 +13,7 @@ import {
   Contact,
 } from "./routes/index"
 
-const App = () => {
+function App() {
   return (
     <Routes>
       <Route path="/" element={<Navbar />}>
