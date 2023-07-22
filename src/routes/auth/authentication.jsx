@@ -24,7 +24,6 @@ const Authentication = () => {
       <main className="relative pt-[15vh] flex items-center justify-center">
         {variant === "LOGIN" ? (
           <>
-            
             <div className="w-[470px]">
               <Title
                 title={"Log in"}
@@ -36,9 +35,8 @@ const Authentication = () => {
                 fontP={"lg"}
               />
               <Login />
-            </div>
-            <div className="w-[470px] h-[220px] bg-[#f3f3f3] my-10">
-              <div className="mx-5">
+
+              <div className="bg-[#f3f3f3] p-3 my-5 rounded-md">
                 <Title
                   title={"Are you a new customer?"}
                   paragraph={
@@ -54,11 +52,9 @@ const Authentication = () => {
                 />
               </div>
             </div>
-            
           </>
         ) : (
           <>
-            
             <div className="w-[470px]">
               <Title
                 title={"Sign in"}
@@ -72,7 +68,6 @@ const Authentication = () => {
 
               <SignUpForm />
             </div>
-            
           </>
         )}
       </main>
