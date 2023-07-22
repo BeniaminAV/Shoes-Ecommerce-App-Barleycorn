@@ -3,6 +3,7 @@ import { signInAuthUserWithEmailAndPassword } from "../../utils/firebase/firebas
 import FormInput from "../formInput"
 import Button from "../button"
 import { toast } from "react-hot-toast"
+import { isEmpty } from "lodash"
 
 const defaultFormInput = {
   email: "",
@@ -19,6 +20,11 @@ const Login = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault()
+
+    if (isEmpty(email) || isEmpty(password)) {
+      toast.error("Complete all fields!") 
+      return
+    }
 
     try {
       const response = await signInAuthUserWithEmailAndPassword(email, password)

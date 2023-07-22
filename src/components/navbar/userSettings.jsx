@@ -14,7 +14,7 @@ const UserOptions = () => {
         to={"/favorite"}
         className="hidden lg:flex"
       />
-      <LinkRoutes label={<AiOutlineShopping size={25} />} to={"/shop"} />
+      <LinkRoutes label={<AiOutlineShopping size={25} />} to={"/cart"} />
 
       <LinkRoutes
         label={<AiOutlineUser size={25} />}

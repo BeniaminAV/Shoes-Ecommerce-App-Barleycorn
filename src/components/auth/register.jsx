@@ -6,6 +6,7 @@ import {
 import FormInput from "../formInput"
 import Button from "../button"
 import { toast } from "react-hot-toast"
+import { isEmpty } from "lodash"
 
 const defaultFormInput = {
   displayName: "",
@@ -25,6 +26,15 @@ const SignUpForm = () => {
   const onSubmit = async (event) => {
     event.preventDefault()
 
+    if (
+      isEmpty(displayName) ||
+      isEmpty(email) ||
+      isEmpty(password) ||
+      isEmpty(confirmPassword)
+    ) {
+      toast.error("Complete all fields!")
+    }
+
     if (password !== confirmPassword) {
       toast.error("Password doesn't match!")
     }
@@ -36,8 +46,9 @@ const SignUpForm = () => {
       toast.success("Resgistred")
       resetFormField()
     } catch (error) {
-      console.log(error.message)
-      toast.error("User exists")
+      if (error.code === "user already exists") {
+        toast.error("User exists")
+      }
     }
   }
 

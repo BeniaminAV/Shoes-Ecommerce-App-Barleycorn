@@ -1,10 +1,17 @@
 import { Routes, Route } from "react-router-dom"
-import Navbar from "./routes/navbar/navbar"
-import Home from "./routes/home/home"
-import Favorite from "./routes/favorite/favorite"
-import Shop from "./routes/shop/shop"
-import Authentication from "./routes/auth/authentication"
-import User from "./routes/user/user"
+import {
+  Navbar,
+  Home,
+  Favorite,
+  Cart,
+  User,
+  Authentication,
+  Novelty,
+  Collection,
+  Sales,
+  CustomerService,
+  Contact,
+} from "./routes/index"
 
 const App = () => {
   return (
@@ -12,9 +19,14 @@ const App = () => {
       <Route path="/" element={<Navbar />}>
         <Route index element={<Home />} />
         <Route path="/favorite" element={<Favorite />} />
-        <Route path="/shop" element={<Shop />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/user" element={<User />} />
         <Route path="/authentication/*" element={<Authentication />} />
+        <Route path="/novelty" element={<Novelty />} />
+        <Route path="/collection" element={<Collection />} />
+        <Route path="/sales" element={<Sales />} />
+        <Route path="/customService" element={<CustomerService />} />
+        <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>
   )

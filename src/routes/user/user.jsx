@@ -1,6 +1,6 @@
 const User = () => {
   return (
-    <div>
+    <div className="pt-[10vh]">
       <h2>this is User Page</h2>
     </div>
   )

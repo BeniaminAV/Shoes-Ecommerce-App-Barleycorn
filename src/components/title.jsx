@@ -4,8 +4,8 @@ const Title = ({ title, paragraph, className, fontT, fontP }) => {
 
   return (
     <div className={className}>
-      <h2 className={` font-semibold py-5 text-black ${fontTitle}`}>{title}</h2>
-      <p className={`py-5 ${fontParagraph}`}>{paragraph}</p>
+      <h2 className={` font-semibold py-5  ${fontTitle}`}>{title}</h2>
+      <p className={`py-5 font-semibold ${fontParagraph}`}>{paragraph}</p>
     </div>
   )
 }

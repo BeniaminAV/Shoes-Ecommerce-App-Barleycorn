@@ -1,5 +1,5 @@
 import { ImageBg } from "../../assets"
-import SaleUp from "./saleUp"
+import SaleUp from "./components/saleUp"
 
 const Backgroud = () => {
   return (
