@@ -25,6 +25,7 @@ const Authentication = () => {
         {variant === "LOGIN" ? (
           <>
             <div className="w-[470px]">
+              
               <Title
                 title={"Log in"}
                 paragraph={
@@ -50,12 +51,14 @@ const Authentication = () => {
                   buttonType={"green"}
                   onClick={setVar}
                 />
+                
               </div>
             </div>
           </>
         ) : (
           <>
             <div className="w-[470px]">
+              
               <Title
                 title={"Sign in"}
                 paragraph={`Are you already registered? Log in`}
@@ -67,6 +70,7 @@ const Authentication = () => {
               <Button buttonType={"green"} label={"Log in"} onClick={setVar} />
 
               <SignUpForm />
+              
             </div>
           </>
         )}
