@@ -3,13 +3,16 @@ import Container from "../../components/container"
 import UserOptions from "../../components/navbar/userSettings"
 import Reduction from "../../components/navbar/reduction"
 import LinkRoutes from "../../components/link"
+import { GrClose } from "react-icons/gr"
 import { GiHamburgerMenu } from "react-icons/gi"
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
+import UserMenu from "../../components/navbar/userMenu"
 
 const TOP_OFFSET = 66
 
 const Navbar = () => {
   const [showBackground, setShowBackground] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     const handleShow = () => {
@@ -24,17 +27,40 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleShow)
   })
 
+  const openBar = useCallback(() => {
+    setIsOpen(!isOpen)
+  }, [isOpen, setIsOpen])
+
+  const handleCloseNav = () => {
+    setIsOpen(false) 
+  }
+
   return (
     <main>
       <div
-        className={`fixed z-10  w-full hover:bg-white transition  ease-in
-      ${showBackground ? "bg-white border-b-[1px] shadow-sm" : ""}
+        className={`fixed z-10 w-full transition ease-in
+      ${
+        showBackground
+          ? "bg-white  border-b-[1px] shadow-sm text-black"
+          : "bg-white lg:bg-transparent hover:bg-white lg:text-white hover:text-black"
+      }
       `}>
         <Reduction />
         <Container>
-          <div className="flex flex-row items-center justify-between py-4  gap-3 md:gap-0">
-            <div className="lg:hidden">
-              <LinkRoutes label={<GiHamburgerMenu size={20} />} to={"/shop"} />
+          <div className="flex items-center justify-between py-4  gap-3 md:gap-0">
+            <div className="lg:hidden cursor-pointer mt-2">
+              {isOpen ? (
+                <div>
+                  <button>
+                    <GrClose size={20} onClick={openBar} />
+                  </button>
+                  <UserMenu onClick={handleCloseNav} />
+                </div>
+              ) : (
+                <button>
+                  <GiHamburgerMenu size={20} onClick={openBar} />
+                </button>
+              )}
             </div>
 
             <div className="flex items-center justify-between ">

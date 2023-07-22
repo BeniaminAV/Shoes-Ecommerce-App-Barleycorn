@@ -7,3 +7,7 @@ body,
 :root {
   height: 100%;
 }
+
+.burgerLink {
+  @apply py-5 border-b-[1px] border-neutral-500 w-full
+}
