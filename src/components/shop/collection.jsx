@@ -7,7 +7,7 @@ const CollectionItem = ({ shoes }) => {
       {shoes.map((category, i) => (
         <div key={i} className="grid lg:grid-cols-2 grid-cols-1 gap-x-5">
           {category.items.map((shoess) => (
-            <DirectoryItem shoess={shoess} key={shoess.id} />
+            <DirectoryItem shoess={shoess} key={shoess.id}/>
           ))}
         </div>
       ))}
