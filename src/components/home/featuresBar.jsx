@@ -9,7 +9,7 @@ import {
 const FeaturesBar = () => {
   return (
     <Container>
-      <div className="grid lg:grid-cols-4  grid-cols-2 gap-x-auto h-[15vh] p-2">
+      <div className="grid lg:grid-cols-4 grid-cols-2 gap-x-auto h-[20vh] p-2">
         <span className="flex items-center justify-center gap-x-2 my-2 text-sm lg:text-lg">
           <GiCommercialAirplane size={20} />
           <p>FREE EXPRESS SHIPPING</p>

@@ -7,7 +7,7 @@ const FormInput = ({ label, ...otherProps }) => {
       <input
         type="text"
         {...otherProps}
-        className="block rounded-md p-4 w-full text-md text-zinc-500 bg-neutral-200 appearance-none focus:outline-none focus:ring-0 peer invalid:border-b-1"
+        className="block rounded-md p-2 w-full text-md text-zinc-500 bg-neutral-200 appearance-none focus:outline-none focus:ring-0 peer invalid:border-b-1"
       />
     </div>
   )
