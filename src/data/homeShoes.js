@@ -1,29 +1,5 @@
-import {
-  Clasic1,
-  Clasic2,
-  Clasic3,
-  Clasic4,
-  Clasic5,
-  Clasic6,
-  Clasic7,
-  Clasic8,
-  Shoes1,
-  Shoes2,
-  Shoes3,
-  Shoes4,
-  Shoes5,
-  Shoes6,
-  Shoes7,
-  Shoes8,
-  Sneak1,
-  Sneak2,
-  Sneak3,
-  Sneak4,
-  Sneak5,
-  Sneak6,
-  Sneak7,
-  Sneak8,
-} from "../assets/homeShoes"
+import {Clasic1, Clasic2, Clasic3, Clasic4, Clasic5, Clasic6, Clasic7, Clasic8, Shoes1, Shoes2, Shoes3, Shoes4, Shoes5, Shoes6, Shoes7, Shoes8, Sneak1, 
+Sneak2, Sneak3, Sneak4, Sneak5, Sneak6, Sneak7, Sneak8} from "../assets/homeShoes"
 
 const shoes = [
   {
