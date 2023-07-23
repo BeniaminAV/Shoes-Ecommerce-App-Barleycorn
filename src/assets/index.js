@@ -6,6 +6,7 @@ import IconSneak from "./iconSneak.png"
 import sneakLord from "./sneakLord.png"
 import Clasic781 from "./clasic781.png"
 import Sloop from "./sloop.png"
+import NoveltyImg from "./novelty.jpg"
 
 export {
   ImageBg,
@@ -16,4 +17,5 @@ export {
   sneakLord,
   Clasic781,
   Sloop,
+  NoveltyImg,
 }
