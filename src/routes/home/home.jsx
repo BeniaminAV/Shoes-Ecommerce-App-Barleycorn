@@ -2,8 +2,8 @@ import Backgroud from "../../components/home/background"
 import ContentShowOne from "../../components/home/contentShowOne"
 import ContentShowThree from "../../components/home/contentShowThree"
 import ContentShowTwo from "../../components/home/contentShowTwo"
+import Directory from "../../components/home/directory"
 import FeaturesBar from "../../components/home/featuresBar"
-import Shoes from "../../components/home/shoes"
 import TripSea from "../../components/home/tripSea"
 import shoes from "../../data/homeShoes"
 
@@ -16,7 +16,7 @@ const Home = () => {
     <main>
       <Backgroud />
       <FeaturesBar />
-      <Shoes
+      <Directory
         shoes={firstSlice}
         title={"Sale Bestsellers"}
         paragraph="Discover the best-selling products"
@@ -24,13 +24,13 @@ const Home = () => {
       <ContentShowOne />
       <TripSea />
       <ContentShowTwo />
-      <Shoes
+      <Directory
         shoes={twoSlice}
         title="Sneakers"
         paragraph="A selection of the best-selling products in the last 7 days"
       />
       <ContentShowThree />
-      <Shoes
+      <Directory
         shoes={threeSlice}
         title="Classic 781 Collection"
         paragraph="A laced Ankle Boot that traces the Brand Heritage Barleycorn"

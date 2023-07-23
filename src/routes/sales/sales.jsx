@@ -1,7 +1,10 @@
+import shoes from "../../data/homeShoes"
+import Shop from "../../components/shop/shop"
+
 const Sales = () => {
   return (
     <div className="pt-[11vh]">
-      <h2>This is Sales Page</h2>
+      <Shop shoes={shoes} />
     </div>
   )
 }
