@@ -1,14 +1,14 @@
 import { useCallback, useState } from "react"
-import SignUpForm from "../../components/auth/register"
-import Button from "../../components/button"
-import Container from "../../components/container"
-import Title from "../../components/title"
-import Login from "../../components/auth/login"
+import Container from "../container"
+import Title from "../title"
+import Login from './components/login'
+import SignUpForm from './components/register'
+import Button from "../button"
 
 const VARIANT = ["LOGIN", "REGISTER"]
 console.log(VARIANT)
 
-const Authentication = () => {
+const Auth = () => {
   const [variant, setVariant] = useState("LOGIN")
 
   const setVar = useCallback(() => {
@@ -25,7 +25,6 @@ const Authentication = () => {
         {variant === "LOGIN" ? (
           <>
             <div className="w-[470px]">
-              
               <Title
                 title={"Log in"}
                 paragraph={
@@ -51,14 +50,12 @@ const Authentication = () => {
                   buttonType={"green"}
                   onClick={setVar}
                 />
-                
               </div>
             </div>
           </>
         ) : (
           <>
             <div className="w-[470px]">
-              
               <Title
                 title={"Sign in"}
                 paragraph={`Are you already registered? Log in`}
@@ -70,7 +67,6 @@ const Authentication = () => {
               <Button buttonType={"green"} label={"Log in"} onClick={setVar} />
 
               <SignUpForm />
-              
             </div>
           </>
         )}
@@ -79,4 +75,4 @@ const Authentication = () => {
   )
 }
 
-export default Authentication
+export default Auth

@@ -3,7 +3,6 @@ import {
   AiOutlineHeart,
   AiOutlineShopping,
   AiOutlineUser,
-  AiOutlineLogin,
 } from "react-icons/ai"
 
 const UserOptions = () => {
@@ -18,12 +17,6 @@ const UserOptions = () => {
 
       <LinkRoutes
         label={<AiOutlineUser size={25} />}
-        to={"/user"}
-        className="hidden lg:flex"
-      />
-
-      <LinkRoutes
-        label={<AiOutlineLogin size={25} />}
         to={"/authentication"}
         className="hidden lg:flex"
       />

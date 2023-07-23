@@ -4,7 +4,6 @@ import {
   Home,
   Favorite,
   Cart,
-  User,
   Authentication,
   Novelty,
   Collection,
@@ -12,15 +11,33 @@ import {
   CustomerService,
   Contact,
 } from "./routes/index"
+import { useDispatch } from "react-redux"
+import { useEffect } from "react"
+import {
+  createDocumentForAuth,
+  onAuthStateChangedListener,
+} from "./utils/firebase/firebase"
+import { setCurrentUser } from "./store/user/user.action"
 
 function App() {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChangedListener((user) => {
+      if (user) {
+        createDocumentForAuth(user)
+      }
+      dispatch(setCurrentUser(user))
+    })
+    return unsubscribe
+  }, [dispatch])
+
   return (
     <Routes>
       <Route path="/" element={<Navbar />}>
         <Route index element={<Home />} />
         <Route path="/favorite" element={<Favorite />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/user" element={<User />} />
         <Route path="/authentication/*" element={<Authentication />} />
         <Route path="/novelty" element={<Novelty />} />
         <Route path="/collection" element={<Collection />} />

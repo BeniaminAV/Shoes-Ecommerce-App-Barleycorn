@@ -43,6 +43,8 @@ export const createDocumentForAuth = async (
 ) => {
   if (!userAuth) return
 
+  const { displayName, email } = userAuth
+
   const userDocRef = doc(db, "users", userAuth.uid)
   console.log(userDocRef)
 
@@ -51,13 +53,15 @@ export const createDocumentForAuth = async (
   console.log(onSnapshot.exists())
 
   if (!onSnapshot.exists()) {
-    const { displayName, email } = userAuth
+    // Utilizați nume de variabile diferite aici pentru a evita conflictul de nume
+    const newDisplayName = displayName
+    const newEmail = email
     const createdAt = new Date()
 
     try {
       await setDoc(userDocRef, {
-        email,
-        displayName,
+        email: newEmail,
+        displayName: newDisplayName,
         createdAt,
         ...additionalInformation,
       })
@@ -83,5 +87,5 @@ export const signInAuthUserWithEmailAndPassword = async (email, password) => {
 
 export const signOutUser = async () => await signOut(auth)
 
-export const onAuthStateChangedListener = async (callback) =>
+export const onAuthStateChangedListener = (callback) =>
   onAuthStateChanged(auth, callback)

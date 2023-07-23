@@ -42,7 +42,7 @@ const Navbar = () => {
       ${
         showBackground
           ? "bg-white  border-b-[1px] shadow-sm text-black"
-          : "bg-white lg:bg-transparent hover:bg-white lg:text-white hover:text-black"
+          : "bg-white lg:bg-transparent hover:bg-white text-black"
       }
       `}>
         <Reduction />

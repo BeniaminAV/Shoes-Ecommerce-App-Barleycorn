@@ -1,6 +1,5 @@
 import {
   AiOutlineHeart,
-  AiOutlineLogin,
   AiOutlineShopping,
   AiOutlineUser,
 } from "react-icons/ai"
@@ -31,9 +30,8 @@ const UserMenu = ({ onClick }) => {
           <span className="burgerLink flex items-center justify-around border-none">
             <LinkRoutes label={<AiOutlineHeart size={25} />} to={"/favorite"} />
             <LinkRoutes label={<AiOutlineShopping size={25} />} to={"/cart"} />
-            <LinkRoutes label={<AiOutlineUser size={25} />} to={"/user"} />
             <LinkRoutes
-              label={<AiOutlineLogin size={25} />}
+              label={<AiOutlineUser size={25} />}
               to={"/authentication"}
             />
           </span>
