@@ -24,6 +24,7 @@ const User = () => {
     <Container>
       <main className="relative pt-[30vh] flex items-center justify-center text-center">
         <div className="w-[470px]">
+          
           <Title
             fontT="5xl"
             title="User Info"
@@ -36,6 +37,7 @@ const User = () => {
           </div>
 
           <Button label={"Sign Out"} onClick={onSignOut} />
+          
         </div>
       </main>
     </Container>
