@@ -13,8 +13,9 @@ const Novelty = () => {
         alt={`name ${NoveltyImg}`}
         className="h-[70vh]"
         title="Novelty"
-        paragraph="Discover the latest news from the Barleycorn collection, create your look and define your style without ever giving up comfort and Made in Italy quality.
-Renew your style today!"
+        paragraph="Discover the latest news from the Barleycorn collection, 
+        create your look and define your style without ever giving up comfort and Made in Italy quality.
+        Renew your style today!"
       />
       <NoveltyItem shoes={noveltyItem} />
     </>
