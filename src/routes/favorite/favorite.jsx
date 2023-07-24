@@ -22,7 +22,7 @@ const Favorite = () => {
         <>
           <Banner
             title={"No products have been added to the list yet"}
-            className="bg-[#f3f3f3] text-neutral-300 h-[50vh]"
+            className="bg-[#f3f3f3] text-neutral-500 h-[50vh]"
           />
         </>
       )}

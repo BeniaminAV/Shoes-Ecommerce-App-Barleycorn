@@ -8,7 +8,7 @@ import ShowUserEmail from "../showUserEmail"
 import Button from "../button"
 import { signOutUser } from "../../utils/firebase/firebase"
 import { toast } from "react-hot-toast"
-import Count from "./count"
+import Count from "./components/countFav"
 
 const UserMenu = ({ onClick }) => {
   const onSignOut = async () => {

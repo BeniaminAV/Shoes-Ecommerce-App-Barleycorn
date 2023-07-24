@@ -1,6 +1,8 @@
 const CustomButton = ({ className, label, onClick }) => {
   return (
-    <button className={className} onClick={onClick}>
+    <button
+      className={`hover:text-neutral-400 ${className} `}
+      onClick={onClick}>
       {label}
     </button>
   )

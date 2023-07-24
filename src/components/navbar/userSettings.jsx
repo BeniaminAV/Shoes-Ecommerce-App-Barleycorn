@@ -4,7 +4,8 @@ import {
   AiOutlineShopping,
   AiOutlineUser,
 } from "react-icons/ai"
-import Count from "./count"
+import Count from "./components/countFav"
+import CartCount from "./components/countCart"
 
 const UserOptions = () => {
   return (
@@ -18,7 +19,10 @@ const UserOptions = () => {
         <Count className="hidden lg:flex text-white" />
       </div>
 
-      <LinkRoutes label={<AiOutlineShopping size={25} />} to={"/cart"} />
+      <div className="flex items-center justify-center">
+        <LinkRoutes label={<AiOutlineShopping size={25} />} to={"/cart"} />
+        <CartCount className="text-white" />
+      </div>
 
       <LinkRoutes
         label={<AiOutlineUser size={25} />}

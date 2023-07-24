@@ -1,16 +1,16 @@
 import { useSelector } from "react-redux"
-import { selectCountFavorite } from "../../store/favorite/favorite.selector"
+import { selectCartCount } from "../../../store/cart/cart.selector"
 
-const Count = ({ className }) => {
-  const favoriteCount = useSelector(selectCountFavorite)
+const CartCount = ({ className }) => {
+  const cartCount = useSelector(selectCartCount)
 
   return (
     <>
-      {favoriteCount ? (
+      {cartCount ? (
         <>
           <span
             className={`w-[22px] h-[22px] absolute mb-5 ml-7 bg-black rounded-full flex items-center justify-center ${className}`}>
-            <p className="text-semibold text-xs">{favoriteCount}</p>
+            <p className="text-semibold text-xs">{cartCount}</p>
           </span>
         </>
       ) : (
@@ -20,4 +20,4 @@ const Count = ({ className }) => {
   )
 }
 
-export default Count
+export default CartCount
