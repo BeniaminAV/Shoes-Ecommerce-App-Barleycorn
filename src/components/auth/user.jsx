@@ -17,6 +17,7 @@ const User = () => {
       toast.success("You logout")
     } catch (error) {
       console.log(error)
+      toast.error("Something went wrong")
     }
   }
 
