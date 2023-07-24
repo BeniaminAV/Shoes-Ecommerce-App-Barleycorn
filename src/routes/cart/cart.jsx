@@ -9,7 +9,6 @@ const Cart = () => {
   return (
     <main>
       <Banner title={"Cart"} className="bg-black h-[40vh]" />
-
       {cartItems ? (
         <>
           <CartItems />
