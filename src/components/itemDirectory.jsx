@@ -90,7 +90,7 @@ const DirectoryItem = ({ shoess }) => {
       </div>
       <img src={imageUrl} alt={`name ${name}`} />
       <h2 className="text-md font-semibold truncate">{name}</h2>
-      <p className="text-md font-semibold">{price}</p>
+      <p className="text-md font-semibold">{price} $</p>
     </div>
   )
 }

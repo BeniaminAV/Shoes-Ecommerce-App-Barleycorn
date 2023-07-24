@@ -1,4 +1,4 @@
-const Button = ({ label, onClick, buttonType }) => {
+const Button = ({ label, onClick, buttonType, className }) => {
   const bgColor =
     buttonType === "green"
       ? "bg-green-600 hover:bg-green-500"
@@ -6,7 +6,7 @@ const Button = ({ label, onClick, buttonType }) => {
 
   return (
     <button
-      className={`w-full h-[40px] rounded-md uppercase text-white ${bgColor} transition`}
+      className={`w-full h-[40px] rounded-md uppercase text-white ${bgColor} transition ${className}`}
       onClick={onClick}>
       <p className="text-white text-md font-bold"> {label}</p>
     </button>

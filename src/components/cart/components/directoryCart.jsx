@@ -28,7 +28,7 @@ const DirectoryCart = ({ item }) => {
           />
           <h2 className="text-md font-semibold truncate w-[200px]">{name}</h2>
         </div>
-        <p className="text-md font-semibold">{price}</p>
+        <p className="text-md font-semibold">{price} $</p>
         <CustomButton label={<GrFormClose size={20} />} onClick={removeItem} />
       </div>
 

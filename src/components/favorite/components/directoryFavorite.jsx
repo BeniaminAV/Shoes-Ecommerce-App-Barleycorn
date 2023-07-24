@@ -48,7 +48,7 @@ const DirectoryFavorite = ({ item }) => {
           <h2 className="text-md font-semibold truncate w-[200px]">{name}</h2>
         </div>
         
-        <p className="text-md font-semibold">{price}</p>
+        <p className="text-md font-semibold">{price} $</p>
         <div className="flex items-center justify-center">
           <CustomButton
             label={<GrFormClose size={20} />}
