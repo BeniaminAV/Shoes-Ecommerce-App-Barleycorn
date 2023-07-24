@@ -8,7 +8,7 @@ import { GiHamburgerMenu } from "react-icons/gi"
 import { useCallback, useEffect, useState } from "react"
 import UserMenu from "../../components/navbar/userMenu"
 
-const TOP_OFFSET = 66
+const TOP_OFFSET = 99
 
 const Navbar = () => {
   const [showBackground, setShowBackground] = useState(false)
@@ -41,8 +41,8 @@ const Navbar = () => {
         className={`fixed z-10 w-full transition ease-in
       ${
         showBackground
-          ? "bg-white  border-b-[1px] shadow-sm text-black"
-          : "bg-white lg:bg-transparent hover:bg-white text-black"
+          ? "bg-white  border-b-[1px] shadow-sm"
+          : "bg-white lg:bg-transparent  lg:hover:bg-white hover:text-black text-black lg:text-white"
       }
       `}>
         <Reduction />

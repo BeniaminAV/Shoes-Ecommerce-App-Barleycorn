@@ -8,6 +8,7 @@ import ShowUserEmail from "../showUserEmail"
 import Button from "../button"
 import { signOutUser } from "../../utils/firebase/firebase"
 import { toast } from "react-hot-toast"
+import Count from "./count"
 
 const UserMenu = ({ onClick }) => {
   const onSignOut = async () => {
@@ -16,6 +17,7 @@ const UserMenu = ({ onClick }) => {
       toast.success("You logout")
     } catch (error) {
       console.log(error)
+      toast.error("Something went wrong")
     }
   }
 
@@ -41,7 +43,14 @@ const UserMenu = ({ onClick }) => {
             <LinkRoutes label={"Contact Us"} to={"contact"} />
           </span>
           <span className="burgerLink flex items-center justify-around border-none">
-            <LinkRoutes label={<AiOutlineHeart size={25} />} to={"/favorite"} />
+            <div className="flex items-center justify-center">
+              <LinkRoutes
+                label={<AiOutlineHeart size={25} />}
+                to={"/favorite"}
+              />
+              <Count className="text-black bg-white" />
+            </div>
+
             <LinkRoutes label={<AiOutlineShopping size={25} />} to={"/cart"} />
             <LinkRoutes
               label={<AiOutlineUser size={25} />}
