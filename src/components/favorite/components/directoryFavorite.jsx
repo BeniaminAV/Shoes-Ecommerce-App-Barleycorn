@@ -16,6 +16,7 @@ const DirectoryFavorite = ({ item }) => {
       <div
         id={id}
         className="w-full flex md:flex-row flex-col items-center justify-center md:justify-between text-center pt-5">
+        
         <div className="flex md:flex-row flex-col items-center justify-center">
           <img
             src={imageUrl}
@@ -24,6 +25,7 @@ const DirectoryFavorite = ({ item }) => {
           />
           <h2 className="text-md font-semibold truncate w-[200px]">{name}</h2>
         </div>
+        
         <p className="text-md font-semibold">{price}</p>
         <CustomButton label={<GrFormClose size={20} />} onClick={removeItem} />
       </div>
