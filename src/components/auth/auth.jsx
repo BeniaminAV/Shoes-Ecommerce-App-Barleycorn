@@ -21,7 +21,7 @@ const Auth = () => {
 
   return (
     <Container>
-      <main className="relative pt-[15vh] flex items-center justify-center">
+      <main className="relative pt-[13vh] flex items-center justify-center">
         {variant === "LOGIN" ? (
           <>
             <div className="w-[470px]">

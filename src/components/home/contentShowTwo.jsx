@@ -8,12 +8,12 @@ const ContentShowTwo = () => {
     <Container className="relative py-3">
       <div className="flex flex-col md:flex-row">
         <SmallImage
-          className="lg:h-[80vh] h-[50vh] pr-0 md:pr-3 py-3"
+          className="lg:h-[80vh] h-[60vh] pr-0 md:pr-3 py-3"
           src={IconSneak}
           alt={IconSneak}
         />
         <BigImage
-          className="lg:h-[80vh] h-[50vh] pl-0 md:pl-3 py-3"
+          className="lg:h-[80vh] h-[60vh] pl-0 md:pl-3 py-3"
           src={sneakLord}
           alt={sneakLord}
         />

@@ -11,9 +11,9 @@ const User = () => {
 
   const userEmail = user ? user.email : user.email
 
-  const onSignOut = () => {
+  const onSignOut = async () => {
     try {
-      signOutUser()
+      await signOutUser()
       toast.success("You logout")
     } catch (error) {
       console.log(error)
@@ -22,9 +22,8 @@ const User = () => {
 
   return (
     <Container>
-      <main className="relative pt-[30vh] flex items-center justify-center text-center">
+      <main className="relative pt-[13vh] flex items-center justify-center text-center">
         <div className="w-[470px]">
-          
           <Title
             fontT="5xl"
             title="User Info"
@@ -37,7 +36,6 @@ const User = () => {
           </div>
 
           <Button label={"Sign Out"} onClick={onSignOut} />
-          
         </div>
       </main>
     </Container>

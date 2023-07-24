@@ -4,8 +4,21 @@ import {
   AiOutlineUser,
 } from "react-icons/ai"
 import LinkRoutes from "../link"
+import ShowUserEmail from "../showUserEmail"
+import Button from "../button"
+import { signOutUser } from "../../utils/firebase/firebase"
+import { toast } from "react-hot-toast"
 
 const UserMenu = ({ onClick }) => {
+  const onSignOut = async () => {
+    try {
+      await signOutUser()
+      toast.success("You logout")
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <div
       className="fixed left-0 right-0 mt-[1.7vh] bg-[#222222] h-full "
@@ -35,6 +48,10 @@ const UserMenu = ({ onClick }) => {
               to={"/authentication"}
             />
           </span>
+          <ShowUserEmail className="text-white uppercase font-semibold text-center py-5" />
+          <div className="mx-10">
+            <Button label="Sign Out" onClick={onSignOut} />
+          </div>
         </div>
       </div>
     </div>
