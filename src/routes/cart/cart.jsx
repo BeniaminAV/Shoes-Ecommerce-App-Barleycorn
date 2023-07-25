@@ -17,7 +17,7 @@ const Cart = () => {
         <>
           <Banner
             title={"Your shopping cart is empty"}
-            className="bg-[#f3f3f3] text-neutral-500 h-[50vh]"
+            className="bg-[#f3f3f3] text-neutral-600 h-[50vh]"
           />
         </>
       )}

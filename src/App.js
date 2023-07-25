@@ -8,7 +8,7 @@ import {
   Novelty,
   Collection,
   Sales,
-  CustomerService,
+
   Contact,
 } from "./routes/index"
 import { useDispatch } from "react-redux"
@@ -42,7 +42,6 @@ function App() {
         <Route path="/novelty" element={<Novelty />} />
         <Route path="/collection" element={<Collection />} />
         <Route path="/sales" element={<Sales />} />
-        <Route path="/customService" element={<CustomerService />} />
         <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>

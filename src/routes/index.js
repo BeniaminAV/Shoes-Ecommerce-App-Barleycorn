@@ -2,7 +2,6 @@ import Authentication from "./auth/auth"
 import Cart from "./cart/cart"
 import Collection from "./collection/collection"
 import Contact from "./contact/contact"
-import CustomerService from "./customer/customer"
 import Favorite from "./favorite/favorite"
 import Home from "./home/home"
 import Navbar from "./navbar/navbar"
@@ -15,7 +14,6 @@ export {
   Cart,
   Collection,
   Contact,
-  CustomerService,
   Favorite,
   Home,
   Navbar,

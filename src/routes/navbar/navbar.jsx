@@ -32,7 +32,7 @@ const Navbar = () => {
   }, [isOpen, setIsOpen])
 
   const handleCloseNav = () => {
-    setIsOpen(false) 
+    setIsOpen(false)
   }
 
   return (
@@ -74,10 +74,6 @@ const Navbar = () => {
                 <LinkRoutes label={"Novelty"} to={"/novelty"} />
                 <LinkRoutes label={"Collection"} to={"/collection"} />
                 <LinkRoutes label={"Sales"} to={"sales"} />
-                <LinkRoutes
-                  label={"Customers Services"}
-                  to={"/customService"}
-                />
                 <LinkRoutes label={"Contact Us"} to={"contact"} />
               </div>
             </div>

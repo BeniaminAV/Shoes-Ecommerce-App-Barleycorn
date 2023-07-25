@@ -37,9 +37,6 @@ const UserMenu = ({ onClick }) => {
             <LinkRoutes label={"Sales"} to={"sales"} />
           </span>
           <span className="burgerLink">
-            <LinkRoutes label={"Customers Services"} to={"/customService"} />
-          </span>
-          <span className="burgerLink">
             <LinkRoutes label={"Contact Us"} to={"contact"} />
           </span>
           <span className="burgerLink flex items-center justify-around border-none">
