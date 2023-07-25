@@ -1,8 +1,12 @@
+import Banner from "../../components/banner"
+import ContactAll from "../../components/contact/contactAll"
+
 const Contact = () => {
   return (
-    <div className="pt-[11vh]">
-      <h2>This is Contact Page</h2>
-    </div>
+    <main>
+      <Banner title={"Contanct"} className="bg-black h-[40vh]" />
+      <ContactAll />
+    </main>
   )
 }
 
