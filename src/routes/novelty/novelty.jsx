@@ -7,7 +7,7 @@ const Novelty = () => {
   const noveltyItem = shoes.slice(1, 2)
 
   return (
-    <>
+    <div>
       <ShopIntro
         src={NoveltyImg}
         alt={`name ${NoveltyImg}`}
@@ -18,7 +18,7 @@ const Novelty = () => {
         Renew your style today!"
       />
       <NoveltyItem shoes={noveltyItem} />
-    </>
+    </div>
   )
 }
 

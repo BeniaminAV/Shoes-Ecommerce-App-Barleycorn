@@ -8,6 +8,7 @@ import Home from "./home/home"
 import Navbar from "./navbar/navbar"
 import Novelty from "./novelty/novelty"
 import Sales from "./sales/sales"
+import Footer from "./footer/footer"
 
 export {
   Authentication,
@@ -20,4 +21,5 @@ export {
   Navbar,
   Novelty,
   Sales,
+  Footer,
 }
