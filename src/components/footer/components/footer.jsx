@@ -4,12 +4,14 @@ const Footer = () => {
   return (
     <div className="h-[60vh] bg-black">
       <Container>
+        
         <div className="text-white text-center pt-20">
           <h2 className="text-4xl">BARLEYCORN</h2>
           <p className="text-xs py-2">Made in Italy since 1991</p>
         </div>
 
         <div className="text-white lg:flex items-center justify-between pt-20 lg:mx-40 text-center">
+          
           <span className="w-[350px]">
             <h2 className="text-xl py-5">Customer Care</h2>
             <div className="text-xs lg:flex hidden lg:flex-col">
@@ -48,6 +50,7 @@ const Footer = () => {
         <p className="relative lg:top-20 top-10  text-neutral-500 text-xs text-center">
           &copy; 2023 FASHION MARKET
         </p>
+        
       </Container>
     </div>
   )
