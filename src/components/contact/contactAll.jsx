@@ -11,6 +11,7 @@ const ContactAll = () => {
         </p>
 
         <div className="lg:flex lg:flex-row items-center justify-center text-center mt-20">
+          
           <span className="lg:max-w-[500px] flex flex-col items-center justify-center py-5">
             <img src={Whap} alt={`name ${Whap}`} />
             <h2 className="text-4xl font-semibold py-5">Whatsapp</h2>
@@ -39,9 +40,11 @@ const ContactAll = () => {
               hours from Monday to Friday
             </p>
           </span>
+          
         </div>
 
         <div className="border-b-[1px] " />
+        
       </div>
     </Container>
   )
