@@ -10,9 +10,9 @@ const ContactAll = () => {
           from Monday to Friday from 9 to 17.30 at this number: 07xxxxxxxx
         </p>
 
-        <div className="lg:flex lg:flex-row items-center justify-center text-center mt-20">
+        <div className="lg:flex lg:flex-row items-center justify-center lg:justify-between text-center mt-20">
           
-          <span className="lg:max-w-[500px] flex flex-col items-center justify-center py-5">
+          <span className="lg:max-w-[400px] flex flex-col items-center justify-center py-5">
             <img src={Whap} alt={`name ${Whap}`} />
             <h2 className="text-4xl font-semibold py-5">Whatsapp</h2>
             <p className="h-[100px]">
@@ -22,7 +22,7 @@ const ContactAll = () => {
             </p>
           </span>
 
-          <span className="lg:max-w-[500px] flex flex-col items-center justify-center py-5">
+          <span className="lg:max-w-[400px] flex flex-col items-center justify-center py-5">
             <img src={Phone} alt={`name ${Phone}`} />
             <h2 className="text-4xl font-semibold py-5">Telephone</h2>
             <p className="h-[100px]">
@@ -31,7 +31,7 @@ const ContactAll = () => {
             </p>
           </span>
 
-          <span className="lg:max-w-[500px] flex flex-col items-center justify-center py-5">
+          <span className="lg:max-w-[400px] flex flex-col items-center justify-center py-5">
             <img src={Email} alt={`name ${Email}`} />
             <h2 className="text-4xl font-semibold py-5">E-mail</h2>
             <p className="h-[100px]">
